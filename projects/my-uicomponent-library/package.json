@@ -1,6 +1,10 @@
 {
   "name": "my-uicomponent-library",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neeyamui/ButtonView.git"
+  },
   "peerDependencies": {
     "@angular/common": "^20.0.0",
     "@angular/core": "^20.0.0"
@@ -8,5 +12,16 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "module": "fesm2022/my-uicomponent-library.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./fesm2022/my-uicomponent-library.mjs"
+    }
+  }
 }
