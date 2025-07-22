@@ -85,6 +85,35 @@
           }
         }
       }
+    },
+    "my-UIcomponent-library": {
+      "projectType": "library",
+      "root": "projects/my-uicomponent-library",
+      "sourceRoot": "projects/my-uicomponent-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/my-uicomponent-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/my-uicomponent-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/my-uicomponent-library/tsconfig.spec.json"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "7ede7bf5-f8ae-4d6d-a5cc-84b5e75da9cc"
   }
 }
